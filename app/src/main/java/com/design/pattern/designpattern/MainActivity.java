@@ -19,7 +19,9 @@ public class MainActivity extends AppCompatActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		toolbar = (Toolbar) findViewById(R.id.toolbar);
+		toolbar.setTitle("设计模式");
 		setSupportActionBar(toolbar);
+
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements
 		} else if (id == R.id.nav_item2) {
 
 		} else if (id == R.id.nav_item3) {
-
+			switchItem3();
 		} else if (id == R.id.nav_item4) {
 
 		} else if (id == R.id.nav_item5) {
@@ -73,5 +75,11 @@ public class MainActivity extends AppCompatActivity implements
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.frame_content, new Item1Fragment()).commit();
 		toolbar.setTitle("单例模式");
+	}
+
+	private void switchItem3() {
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.frame_content, new Item3Fragment()).commit();
+		toolbar.setTitle("观察者模式");
 	}
 }

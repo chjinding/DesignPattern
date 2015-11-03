@@ -5,11 +5,20 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <TextView
-        android:textSize="16sp"
-        android:textColor="@android:color/holo_red_dark"
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="单利模式" />
+        android:text="添加观察者"
+        android:id="@+id/add" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="改变数据"
+        android:id="@+id/change" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 </LinearLayout>
